@@ -1,0 +1,262 @@
+body{
+	display: block;
+	font-family: ff-tisa-sans-web-pro, sans-serif
+}
+
+@media (min-width: 700px){
+	.innerPage{
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		padding: 20px 75px 20px;
+	}
+	.sideMenu{
+		display: block;
+		margin-top: 0px;
+
+	}
+	
+	.internalPics{
+		margin: 40px 0px;	
+	}
+	
+	.mainContent{
+	padding-right: 50px;
+	}
+	
+	.pageTop{
+		padding: 0 200px 15px 15px;
+	}
+}
+
+@media (max-width: 699px){
+	.sideMenu{
+		margin-top: 64px;
+		display: none;
+	}
+	
+	.inputBox{
+		height: 30px;
+	}
+}
+
+footer{
+	display: flex;
+	justify-content: center;
+	box-sizing: border-box;
+	margin:  auto;
+	max-width: 870px;
+	padding: 5px 0px 5px;
+	background-color: #f1f3f5;
+}	
+
+footer p{
+	font-size: 8px;
+}
+
+.pageTop{
+	max-width: 870px;
+	height: 460px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	background-size: cover;
+	background-position: center;
+	background-image: url("images/topGuitar.jpg");
+}
+
+.blackBackground{
+	background-color: #1e2229;
+	border-radius: 15px;
+	padding: 24px;	
+}
+
+.pageHeader{
+	color: white;
+	font-size: 38px;
+	line-height: 48px;
+	font-weight: 800;
+}
+
+.innerPage{
+	max-width: 1024px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.internalPics {
+	width: 100%;
+	margin: 32px 0;
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 15px;
+}
+
+img{
+	max-width: 90%;
+}
+
+.titleSideMenu{
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #474d56;
+}
+
+.contentSideMenu{
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #1e2229;
+}
+
+.pageNav{
+	padding: 12px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	margin: 16px 0;
+	background-color: #f1f3f5;
+}
+
+.bottomNav{
+	min-height: 90px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f1f3f5;
+	max-width: 870px;
+	margin: 0 auto;
+	font-size: 22px;
+	font-weight: 800;
+}
+
+.bottomNavContent{
+	text-decoration: none;
+	color: #ff7c00;
+	padding: 20px;
+}
+
+.bottomNavContent:hover{
+	background-color: #ff7c00;
+	color: white;
+}
+.bottomNav p{
+	padding-left: 20px;
+}
+
+.sideNotes{
+	padding: 5px 5px;
+	background-color: #f1f3f5;
+}
+
+
+.swapPic{
+	width: 200px;
+	height: 260px;
+	border: 50px;
+	
+}
+
+.swapPic:hover{
+	transition: 0.7s;
+}
+
+.amChord{
+	background: url("images/chords/Am-Chord.png");
+	background-size: cover;
+}
+
+.amChord:hover{
+	background: url("images/chords/A-Chord.png");
+	background-size: cover;
+}
+
+.cmChord{
+	background: url("images/chords/Cm-Chord.png");
+	background-size: cover;
+}
+
+.cmChord:hover{
+	background: url("images/chords/C-Chord.png");
+	background-size: cover;
+}
+
+.dmChord{
+	background: url("images/chords/Dm-Chord.png");
+	background-size: cover;
+}
+
+.dmChord:hover{
+	background: url("images/chords/D-Chord.png");
+	background-size: cover;
+}
+
+.emChord{
+	background: url("images/chords/Em-Chord.png");
+	background-size: cover;
+}
+
+.emChord:hover{
+	background: url("images/chords/E-Chord.png");
+	background-size: cover;
+}
+
+.gmChord{
+	background: url("images/chords/Gm-Chord.png");
+	background-size: cover;
+}
+
+.gmChord:hover{
+	background: url("images/chords/G-Chord.png");
+	background-size: cover;
+}
+
+.inputBox{
+	height: 50px;
+	width: 95%;
+	margin: 10px;
+	font-size: 16px;
+}
+
+label{
+	margin-bottom: 3px;
+}
+
+#signUp{
+	height:30px;
+	width: 200px;
+	font-size: 16px;
+	margin: 10px 35%
+	
+}
+
+.errorMessage{
+	color: red;
+}
+
+.submitButton{
+	display: flex;
+	justify-content: center;
+}
+
+
+.topMenu{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 80px;
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	background-color: white;
+	border-radius: 0 0 30px 30px;
+}
+
+.topMenu img{
+	max-height: 100%;
+}
+

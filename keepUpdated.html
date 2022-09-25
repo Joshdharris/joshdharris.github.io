@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Keep Updated</title>
+	<link rel= "stylesheet" href="mainWebCSS.css">
+	<script>
+		window.onload = function(){
+		
+			document.querySelector("#signUp").addEventListener("click", checkInput);
+			
+			function checkInput(){
+				var validInput = 0;
+				var cardNo = parseInt(document.querySelector("#creditCard").value);
+				var pinNo = parseInt(document.querySelector("#pinCode").value);
+				if (cardNo < 1000000000000000 || cardNo > 9999999999999999 ||isNaN(cardNo)){
+					document.querySelector("#invalidCC").innerHTML = "This is not a valid credit card number";
+					validInput = validInput +1;
+				}
+				else {document.querySelector("#invalidCC").innerHTML = "";
+				}
+				if (pinNo < 1000 || pinNo > 9999 || isNaN(pinNo)){
+					document.querySelector("#invalidPIN").innerHTML = "This is not a valid PIN number";
+					validInput = validInput +1;
+				}
+				else {document.querySelector("#invalidPIN").innerHTML = "";}
+				if (validInput === 0){ 
+					function saveData() {
+						document.cookie="First Name ="+document.getElementById('firstName').value;
+						document.cookie="Last Name ="+document.getElementById('lastName').value;
+
+						
+					}
+					alert("We stole all your data! You mug! Why did you fill it in?! Anyway, it's all here: "+document.cookie);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="topMenu">
+		<a href = "index.html"><img src = "images/logoLarge.png" alt = "Beginning Guitar"></a>
+	</div>
+	<div class = "pageTop">
+		<div class="blackBackground">
+			<h1 class="pageHeader">Join our mailing list</h1>
+		</div>
+	</div>
+	<div class = "innerPage">
+		<div class = "mainContent">
+			<div class = "contactForm">
+				<p>Why not give us your email so we can spam you relentlessly until our algorithm figures out how to beat Google's spam filter and seep into your brain like a bad smell?</p>
+				<label for="firstName">First Name</label>
+				<input type = "text" value ="" name = "firstName" id = "firstName" class = "inputBox" required>
+				<label for="lastName">Last Name</label>
+				<input type = "text" value ="" name = "lastName" id = "lastName"  class = "inputBox" required>
+				<label for="email">Email Address</label>
+				<input type = "email" value ="" name = "email" id = "email"  class = "inputBox" required>
+				<label for="creditCard">Credit Card Number</label>
+				<p id = "invalidCC" class = "errorMessage"></p>
+				<input type = "number" value ="" name = "creditCard" id = "creditCard" class = "inputBox">
+				<label for="pinCode">PIN code</label>
+				<p id = "invalidPIN" class = "errorMessage"></p>
+				<input type = "number" value ="" name = "pinCode" id = "pinCode" class = "inputBox">
+				<div class = "submitButton">
+					<input type = "submit" value ="Give us your soul" name="signUp" id = "signUp">
+				</div>
+			</div>
+		</div>
+		<div class = "sideMenu">
+			<h4>Beginning Guitar</h4>
+			<div class="innerSideNav">
+				<a class = "pageNav" href="musictheory1.html">
+					<span class ="titleSideMenu">STEP 1</span>
+					<span class ="contentSideMenu">Beginning to understand music theory</span>
+				</a>
+				<a class = "pageNav" href="chords1.html">
+					<span class ="titleSideMenu">STEP 2</span>
+					<span class ="contentSideMenu">First Chords</span>
+				</a>
+				<a class = "pageNav" href="chords2.html">
+					<span class ="titleSideMenu">STEP 3</span>
+					<span class ="contentSideMenu">Minor Chords</span>
+				</a>
+				<a class = "pageNav" href="keepUpdated.html">	
+					<span class ="titleSideMenu">STEP 4</span>
+					<span class ="contentSideMenu">What's next?</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+<footer>
+	<p> Copyright 2022 Joshua Harris. All information may or may not be accurate depending on my mood when writing it. The goal of this website is to deceive you into giving me all your money while offering you nothing in return. Now gimme gimme gimme!</p>
+</footer>
+</html>
